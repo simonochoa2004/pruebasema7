@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
+	</script> 
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<meta charset="utf-8">
+
+
+	<title>Entrega semana 7</title>
+</head>
+<script type="text/javascript" charset="utf-8">
+
+        $(document).keydown(function (oprimir)
+         {
+            if (oprimir.keyCode == 65)
+            {
+                document.getElementById('A').style.display="block";
+                document.getElementById('B').style.display="none";
+                document.getElementById('C').style.display="none";
+                console.log("A");
+            }
+
+            if (oprimir.keyCode == 66) 
+            {
+                document.getElementById('A').style.display="none";
+                document.getElementById('B').style.display="block";
+                document.getElementById('C').style.display="none";
+                console.log("B");
+            }
+
+            if (oprimir.keyCode == 67) 
+            {
+                document.getElementById('A').style.display="none";
+                document.getElementById('B').style.display="none";
+                document.getElementById('C').style.display="block";
+                console.log("C");
+            }
+        });
+      </script> 
+<body background="fondo.jpg">
+	<center>
+
+		<div class="div">
+			<script type="text/javascript">
+
+
+				function mensaje() 
+				{
+					var mensaje;
+					var opcion = prompt("Ingrese mensaje", "");
+
+
+					if(opcion == "")
+					{
+						mensaje = "No has ingresado el mensaje"; 
+					}
+					else 
+					{
+						mensaje = opcion;
+						alert("(A-B-C) Mantenga la tecla presionada y oprima aceptar para cambiar el color del cuadro");
+						console.log(mensaje);
+					}
+
+					document.getElementById("A").innerHTML = mensaje;
+					document.getElementById("B").innerHTML = mensaje;
+					document.getElementById("C").innerHTML = mensaje;
+				}
+			</script>
+		</div>
+
+		<div id="div">
+		</div>
+		<div class="A" id="A">
+		</div>
+		<div class="B" id="B">
+		</div>
+		<div class="C" id="C">
+		</div>
+		<br><br><br><br><br>
+		<input type="button" value="Ingresar" class="b1" onclick="mensaje()">
+	</center>
+</body>
+</html>
